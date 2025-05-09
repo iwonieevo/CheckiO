@@ -1,2 +1,2 @@
 # checkio
-My solutions for some problems on https://py.checkio.org/
+My solutions for some problems on [Checkio](https://py.checkio.org)
