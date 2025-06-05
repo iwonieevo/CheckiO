@@ -5,13 +5,13 @@ def dijkstra(graph: list[list[str, str, int]], source: str) -> list[(str, str, i
     :param source: Source vertex, start of the whole graph
     :return: Returns a dictionary with nodes as keys and a tuple of the shortest path, and it's distance; {node: (path, distance_from_source)}
     """
-    dist: {str: int} = {}  # storing current distance from source to vertex, if there is no connection, distance == 0
-    prev: {str: str} = {}  # storing path from source to vertex, if there is no connection, path == ""
+    dist: dict[str, int] = {}  # storing current distance from source to vertex, if there is no connection, distance == 0
+    prev: dict[str, int] = {}  # storing path from source to vertex, if there is no connection, path == ""
     for v1, v2, _ in graph:  # filling distances and paths with default values
         dist[v1] = float('inf')
         dist[v2] = float('inf')
-        prev[v1]: str = ""
-        prev[v2]: str = ""
+        prev[v1] = ""
+        prev[v2] = ""
     dist[source] = 0  # the source vertex is considered to have no connection to itself
     queue: list[str] = list(dist.keys())  # adding each vertex to queue
 
